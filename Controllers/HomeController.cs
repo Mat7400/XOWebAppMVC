@@ -20,9 +20,24 @@ namespace XO_WebApp.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var model = new MainModel();
+            model.xo = "resutl will be here"; 
+            return View(model);
         }
+        public IActionResult test()
+        {
+            Random rnd = new Random();
+            int res = rnd.Next(1, 100);
+            string RES = "";
+            if (res > 50) 
+                RES = "X";
+            else 
+                RES = "O";
 
+            var model = new MainModel();
+            model.xo = RES;
+            return View(model);
+        }
         public IActionResult Privacy()
         {
             return View();

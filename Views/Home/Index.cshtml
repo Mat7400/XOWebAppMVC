@@ -2,7 +2,14 @@
     ViewData["Title"] = "Home Page";
 }
 
+@model MainModel
+
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Welcome to XO by mat7400</h1>
+    <div id="btn1"  asp-action="test" asp-controller="Home" method="GET">
+        <a asp-action="test">
+            >>>>>>>>>>>>>>  Clic here to generate X or O
+        </a>
+    </div>
+    @Html.TextAreaFor(m=>m.xo)
 </div>

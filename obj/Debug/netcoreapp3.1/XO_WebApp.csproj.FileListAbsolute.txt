@@ -35,3 +35,4 @@ C:\Users\матвей1\source\repos\XO_WebApp\obj\Debug\netcoreapp3.1\XO_WebApp.
 C:\Users\матвей1\source\repos\XO_WebApp\obj\Debug\netcoreapp3.1\XO_WebApp.pdb
 C:\Users\матвей1\source\repos\XO_WebApp\obj\Debug\netcoreapp3.1\XO_WebApp.genruntimeconfig.cache
 C:\Users\матвей1\source\repos\XO_WebApp\obj\Debug\netcoreapp3.1\XO_WebApp.csproj.CopyComplete
+C:\Users\матвей1\source\repos\XO_WebApp\obj\Debug\netcoreapp3.1\Razor\Views\Home\test.cshtml.g.cs
