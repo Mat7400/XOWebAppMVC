@@ -18,25 +18,38 @@ namespace XO_WebApp.Controllers
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public IActionResult Index(MainModel model)
         {
-            var model = new MainModel();
+            if (model==null) model = new MainModel();
             model.xo = "resutl will be here"; 
             return View(model);
         }
-        public IActionResult test()
+        public IActionResult test(string cellname = "", string xplayer = "X")
         {
             Random rnd = new Random();
             int res = rnd.Next(1, 100);
             string RES = "";
-            if (res > 50) 
+            string next = "";
+            if (xplayer == "X" || xplayer == "")
+            {
                 RES = "X";
-            else 
+                next = "O";
+            }
+            else
+            {
                 RES = "O";
-
+                next = "X";
+            }
             var model = new MainModel();
+            //заполнить клеточку поля 
+            model.Field[cellname] = RES;
+
             model.xo = RES;
-            return View(model);
+            model.Xplayer = next;
+            model.cellname = cellname;
+            //вернуть вместо test.cshtml обратно главную страницу
+            //на главной странице в выбранной клетке должно стоять значение (Х или O или V)
+            return RedirectToAction("Index",model);
         }
         public IActionResult Privacy()
         {

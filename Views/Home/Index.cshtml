@@ -6,10 +6,18 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome to XO by mat7400</h1>
-    <div id="btn1"  asp-action="test" asp-controller="Home" method="GET">
-        <a asp-action="test">
-            >>>>>>>>>>>>>>  Clic here to generate X or O
-        </a>
+    <!-- поле 5х5 -->
+    <p>
+        >Click  to generate X or O
+    </p>
+    <div id="str1">
+        <!-- надо передать в контроллер (в функцию test)  2 параметра: имя клетки где тыкнул игрок
+        и какой игрок ходит(Х или 0)-->
+        <div id="a1"><a asp-action="test" asp-route-cellname="a0" asp-route-xplayer="@Model.Xplayer">@Model.Field["a0"]</a></div>
+        <div id="a2"><a asp-action="test" asp-route-cellname="a1" asp-route-xplayer="@Model.Xplayer">@Model.Field["a1"]</a></div>
+        <div id="a3"><a asp-action="test" asp-route-cellname="a2" asp-route-xplayer="@Model.Xplayer">@Model.Field["a2"]</a></div>
+        <div id="a4"><a asp-action="test" asp-route-cellname="a3" asp-route-xplayer="@Model.Xplayer">@Model.Field["a3"]</a></div>
+        <div id="a5"><a asp-action="test" asp-route-cellname="a4" asp-route-xplayer="@Model.Xplayer">@Model.Field["a4"] </a></div>
     </div>
-    @Html.TextAreaFor(m=>m.xo)
+    @Html.TextAreaFor(m => m.xo)
 </div>
