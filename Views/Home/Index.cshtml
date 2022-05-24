@@ -10,14 +10,53 @@
     <p>
         >Click  to generate X or O
     </p>
-    <div id="str1">
+    <div id="str1" style="display:inline-block;">
         <!-- надо передать в контроллер (в функцию test)  2 параметра: имя клетки где тыкнул игрок
         и какой игрок ходит(Х или 0)-->
-        <div id="a1"><a asp-action="test" asp-route-cellname="a0" asp-route-xplayer="@Model.Xplayer">@Model.Field["a0"]</a></div>
-        <div id="a2"><a asp-action="test" asp-route-cellname="a1" asp-route-xplayer="@Model.Xplayer">@Model.Field["a1"]</a></div>
-        <div id="a3"><a asp-action="test" asp-route-cellname="a2" asp-route-xplayer="@Model.Xplayer">@Model.Field["a2"]</a></div>
+        <div id="a1" style="background-image: url('bg.jpg');">
+            <a asp-action="test" asp-route-cellname="a0" asp-route-xplayer="@Model.Xplayer">
+                @Model.Field["a0"]
+            </a>
+        </div>
+        <div id="a2">
+        <a asp-action="test" asp-route-cellname="a1" asp-route-xplayer="@Model.Xplayer">
+            @Model.Field["a1"]</a></div>
+        <div id="a3">
+        <a asp-action="test" asp-route-cellname="a2" asp-route-xplayer="@Model.Xplayer">@Model.Field["a2"]</a></div>
         <div id="a4"><a asp-action="test" asp-route-cellname="a3" asp-route-xplayer="@Model.Xplayer">@Model.Field["a3"]</a></div>
         <div id="a5"><a asp-action="test" asp-route-cellname="a4" asp-route-xplayer="@Model.Xplayer">@Model.Field["a4"] </a></div>
     </div>
-    @Html.TextAreaFor(m => m.xo)
+    <div id="str2" style="display:inline-block;">
+
+        <div id="b1"><a asp-action="test" asp-route-cellname="b0" asp-route-xplayer="@Model.Xplayer">@Model.Field["b0"]</a></div>
+        <div id="b2"><a asp-action="test" asp-route-cellname="b1" asp-route-xplayer="@Model.Xplayer">@Model.Field["b1"]</a></div>
+        <div id="b3"><a asp-action="test" asp-route-cellname="b2" asp-route-xplayer="@Model.Xplayer">@Model.Field["b2"]</a></div>
+        <div id="b4"><a asp-action="test" asp-route-cellname="b3" asp-route-xplayer="@Model.Xplayer">@Model.Field["b3"]</a></div>
+        <div id="b5"><a asp-action="test" asp-route-cellname="b4" asp-route-xplayer="@Model.Xplayer">@Model.Field["b4"] </a></div>
+    </div>
+    <div id="str3" style="display:inline-block;">
+
+        <div id="c1"><a asp-action="test" asp-route-cellname="c0" asp-route-xplayer="@Model.Xplayer">@Model.Field["c0"]</a></div>
+        <div id="c2"><a asp-action="test" asp-route-cellname="c1" asp-route-xplayer="@Model.Xplayer">@Model.Field["c1"]</a></div>
+        <div id="c3"><a asp-action="test" asp-route-cellname="c2" asp-route-xplayer="@Model.Xplayer">@Model.Field["c2"]</a></div>
+        <div id="c4"><a asp-action="test" asp-route-cellname="c3" asp-route-xplayer="@Model.Xplayer">@Model.Field["c3"]</a></div>
+        <div id="c5"><a asp-action="test" asp-route-cellname="c4" asp-route-xplayer="@Model.Xplayer">@Model.Field["c4"] </a></div>
+    </div>
+    <div id="str4" style="display:inline-block;">
+
+        <div id="d1"><a asp-action="test" asp-route-cellname="d0" asp-route-xplayer="@Model.Xplayer">@Model.Field["d0"]</a></div>
+        <div id="d2"><a asp-action="test" asp-route-cellname="d1" asp-route-xplayer="@Model.Xplayer">@Model.Field["d1"]</a></div>
+        <div id="d3"><a asp-action="test" asp-route-cellname="d2" asp-route-xplayer="@Model.Xplayer">@Model.Field["d2"]</a></div>
+        <div id="d4"><a asp-action="test" asp-route-cellname="d3" asp-route-xplayer="@Model.Xplayer">@Model.Field["d3"]</a></div>
+        <div id="d5"><a asp-action="test" asp-route-cellname="d4" asp-route-xplayer="@Model.Xplayer">@Model.Field["d4"] </a></div>
+    </div>
+    <div id="str5" style="display:inline-block;">
+
+        <div id="e1"><a asp-action="test" asp-route-cellname="e0" asp-route-xplayer="@Model.Xplayer">@Model.Field["e0"]</a></div>
+        <div id="e2"><a asp-action="test" asp-route-cellname="e1" asp-route-xplayer="@Model.Xplayer">@Model.Field["e1"]</a></div>
+        <div id="e3"><a asp-action="test" asp-route-cellname="e2" asp-route-xplayer="@Model.Xplayer">@Model.Field["e2"]</a></div>
+        <div id="e4"><a asp-action="test" asp-route-cellname="e3" asp-route-xplayer="@Model.Xplayer">@Model.Field["e3"]</a></div>
+        <div id="e5"><a asp-action="test" asp-route-cellname="e4" asp-route-xplayer="@Model.Xplayer">@Model.Field["e4"] </a></div>
+    </div>
+    
 </div>

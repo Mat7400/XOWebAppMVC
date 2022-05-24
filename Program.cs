@@ -6,11 +6,12 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using XO_WebApp.Models;
 namespace XO_WebApp
 {
     public class Program
     {
+        public static MainModel mainModelData=null;
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
